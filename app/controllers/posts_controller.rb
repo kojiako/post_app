@@ -1,5 +1,9 @@
 class PostsController < ApplicationController
 
+  def index
+    @post = Post.all
+  end
+
   def new
     @post = current_user.posts.build
   end
